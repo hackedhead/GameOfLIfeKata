@@ -1,11 +1,11 @@
 require 'rspec'
-require_relative '../lib/board'
 
-describe 'Board' do
+describe 'My behaviour' do
 
-  it 'should create a board' do
-    @board = Board.new
+  it 'should have a board' do
+    @board = Board.new(3,3)
+    @game = Game.new(@board)
 
-    expect(@board).to_not be_nil
+
   end
 end
