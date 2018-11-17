@@ -13,18 +13,13 @@ describe 'My behaviour' do
       expect(@game.board).equal?(@board_array)
     end
 
-    it 'should check adjacent' do
-      temp = @game.check_neighbor(1, 0)
-      expect(temp).to be(0)
-    end
-
-    it 'should get correct counts of adjacent' do
-      temp = @game.check_neighbor(1, 1)
+    it 'should check up and down' do
+      temp = @game.check_up_down(1, 1)
       expect(temp).to be(2)
     end
 
-    it 'should get top and bottom' do
-      temp = @game.check_up_down(1, 1)
+    it 'should get left and right' do
+      temp = @game.check_left_right(1, 1)
       expect(temp).to be(2)
     end
   end

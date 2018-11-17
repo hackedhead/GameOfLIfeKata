@@ -6,7 +6,7 @@ class Game
     @board = board
   end
 
-  def check_neighbor(x, y)
+  def check_up_down(x, y)
     live_count = 0
 
     if x != 0
@@ -18,7 +18,7 @@ class Game
     live_count
   end
 
-  def check_up_down(x, y)
+  def check_left_right(x, y)
     live_count = 0
 
     if y != 0
