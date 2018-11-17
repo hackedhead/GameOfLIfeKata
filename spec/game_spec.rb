@@ -22,6 +22,14 @@ describe 'My behaviour' do
       temp = @game.check_left_right(1, 1)
       expect(temp).to be(2)
     end
+
+    it 'sholud check top diags' do
+      @board_array = [[1,0,1],[0,0,0],[0,0,0]]
+      @game = Game.new(@board_array)
+
+      temp = @game.check_top_diagonals(1, 1)
+      expect(temp).to be(2)
+    end
   end
 
 end

@@ -29,4 +29,16 @@ class Game
     end
     live_count
   end
+
+  def check_top_diagonals(row, col)
+    live_count = 0
+
+    if col != 0
+      live_count += @board[row+1][col-1]
+    end
+    if col < board[0].length
+      live_count += @board[row+1][col+1]
+    end
+    live_count
+  end
 end
