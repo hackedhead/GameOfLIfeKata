@@ -17,4 +17,16 @@ class Game
     end
     live_count
   end
+
+  def check_up_down(x, y)
+    live_count = 0
+
+    if y != 0
+      live_count += @board[x][y-1]
+    end
+    if y < board[0].length
+      live_count += @board[x][y+1]
+    end
+    live_count
+  end
 end

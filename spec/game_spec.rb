@@ -5,7 +5,7 @@ describe 'My behaviour' do
 
   context 'board setup' do
     before :each do
-      @board_array = [[0,1,0],[0,0,0],[0,1,0]]
+      @board_array = [[0,1,0],[1,0,1],[0,1,0]]
       @game = Game.new(@board_array)
     end
 
@@ -20,6 +20,11 @@ describe 'My behaviour' do
 
     it 'should get correct counts of adjacent' do
       temp = @game.check_neighbor(1, 1)
+      expect(temp).to be(2)
+    end
+
+    it 'should get top and bottom' do
+      temp = @game.check_up_down(1, 1)
       expect(temp).to be(2)
     end
   end
