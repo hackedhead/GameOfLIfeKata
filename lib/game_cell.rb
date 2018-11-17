@@ -1,0 +1,2 @@
+class GameCell
+end
